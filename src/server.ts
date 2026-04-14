@@ -17,8 +17,14 @@ dotenv.config();
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// Initialize Prisma
-const prisma = new PrismaClient();
+// Initialize Prisma with v7 configuration
+const prisma = new PrismaClient({
+  datasources: {
+    db: {
+      url: process.env.DATABASE_URL,
+    },
+  },
+});
 
 // Initialize Express
 const app: Express = express();
