@@ -1,0 +1,64 @@
+{
+  "app": {
+    "title": "Poland News Hub",
+    "subtitle": "Multilingual News Aggregator",
+    "description": "Stay informed with the latest news from Poland in your preferred language"
+  },
+  "nav": {
+    "home": "Home",
+    "categories": "Categories",
+    "search": "Search",
+    "bookmarks": "Bookmarks",
+    "admin": "Admin",
+    "login": "Login",
+    "logout": "Logout",
+    "profile": "Profile"
+  },
+  "categories": {
+    "politics": "Politics",
+    "business": "Business",
+    "technology": "Technology",
+    "sports": "Sports",
+    "entertainment": "Entertainment",
+    "local": "Local",
+    "health": "Health",
+    "science": "Science"
+  },
+  "buttons": {
+    "readMore": "Read More",
+    "bookmark": "Bookmark",
+    "share": "Share",
+    "comment": "Comment",
+    "search": "Search",
+    "filter": "Filter",
+    "clear": "Clear",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "create": "Create",
+    "publish": "Publish"
+  },
+  "messages": {
+    "loading": "Loading...",
+    "noResults": "No results found",
+    "error": "An error occurred",
+    "success": "Success!",
+    "bookmarkAdded": "Article bookmarked",
+    "bookmarkRemoved": "Bookmark removed",
+    "commentPosted": "Comment posted successfully",
+    "loginRequired": "Please login to continue"
+  },
+  "placeholders": {
+    "search": "Search news...",
+    "email": "Enter your email",
+    "password": "Enter your password",
+    "comment": "Write a comment..."
+  },
+  "time": {
+    "now": "Just now",
+    "minutesAgo": "{{count}} minutes ago",
+    "hoursAgo": "{{count}} hours ago",
+    "daysAgo": "{{count}} days ago"
+  }
+}

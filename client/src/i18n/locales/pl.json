@@ -1,0 +1,64 @@
+{
+  "app": {
+    "title": "Poland News Hub",
+    "subtitle": "Agregator Wiadomości Wielojęzyczny",
+    "description": "Bądź na bieżąco z najnowszymi wiadomościami z Polski w preferowanym języku"
+  },
+  "nav": {
+    "home": "Strona główna",
+    "categories": "Kategorie",
+    "search": "Szukaj",
+    "bookmarks": "Zakładki",
+    "admin": "Admin",
+    "login": "Zaloguj się",
+    "logout": "Wyloguj się",
+    "profile": "Profil"
+  },
+  "categories": {
+    "politics": "Polityka",
+    "business": "Biznes",
+    "technology": "Technologia",
+    "sports": "Sport",
+    "entertainment": "Rozrywka",
+    "local": "Lokalne",
+    "health": "Zdrowie",
+    "science": "Nauka"
+  },
+  "buttons": {
+    "readMore": "Czytaj więcej",
+    "bookmark": "Dodaj do zakładek",
+    "share": "Udostępnij",
+    "comment": "Komentarz",
+    "search": "Szukaj",
+    "filter": "Filtruj",
+    "clear": "Wyczyść",
+    "save": "Zapisz",
+    "cancel": "Anuluj",
+    "delete": "Usuń",
+    "edit": "Edytuj",
+    "create": "Utwórz",
+    "publish": "Opublikuj"
+  },
+  "messages": {
+    "loading": "Ładowanie...",
+    "noResults": "Nie znaleziono wyników",
+    "error": "Wystąpił błąd",
+    "success": "Sukces!",
+    "bookmarkAdded": "Artykuł dodany do zakładek",
+    "bookmarkRemoved": "Zakładka usunięta",
+    "commentPosted": "Komentarz opublikowany pomyślnie",
+    "loginRequired": "Zaloguj się, aby kontynuować"
+  },
+  "placeholders": {
+    "search": "Szukaj wiadomości...",
+    "email": "Wpisz swój email",
+    "password": "Wpisz hasło",
+    "comment": "Napisz komentarz..."
+  },
+  "time": {
+    "now": "Właśnie teraz",
+    "minutesAgo": "{{count}} minut temu",
+    "hoursAgo": "{{count}} godzin temu",
+    "daysAgo": "{{count}} dni temu"
+  }
+}

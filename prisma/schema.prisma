@@ -1,0 +1,192 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id            String     @id @default(cuid())
+  email         String     @unique
+  password      String
+  name          String?
+  avatar        String?
+  language      String     @default("pl")
+  theme         String     @default("light")
+  role          Role       @default(USER)
+  isActive      Boolean    @default(true)
+  emailVerified Boolean    @default(false)
+  createdAt     DateTime   @default(now())
+  updatedAt     DateTime   @updatedAt
+
+  bookmarks Bookmark[]
+  comments  Comment[]
+  sessions  Session[]
+
+  @@index([email])
+  @@index([role])
+}
+
+model Session {
+  id        String   @id @default(cuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  token     String   @unique
+  expiresAt DateTime
+  createdAt DateTime @default(now())
+
+  @@index([userId])
+  @@index([token])
+}
+
+model Article {
+  id            String   @id @default(cuid())
+  title         String
+  slug          String   @unique
+  description   String?
+  content       String?
+  imageUrl      String?
+  sourceUrl     String?
+  sourceName    String?
+  author        String?
+  categoryId    String
+  category      Category @relation(fields: [categoryId], references: [id])
+  status        Status   @default(PUBLISHED)
+  isManual      Boolean  @default(false)
+  publishedAt   DateTime @default(now())
+  fetchedAt     DateTime?
+  viewCount     Int      @default(0)
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  translations ArticleTranslation[]
+  bookmarks    Bookmark[]
+  comments     Comment[]
+
+  @@index([categoryId])
+  @@index([status])
+  @@index([publishedAt])
+  @@index([slug])
+}
+
+model ArticleTranslation {
+  id        String   @id @default(cuid())
+  articleId String
+  article   Article  @relation(fields: [articleId], references: [id], onDelete: Cascade)
+  language  Language
+  title     String
+  description String?
+  content   String?
+  translatedAt DateTime @default(now())
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@unique([articleId, language])
+  @@index([articleId])
+  @@index([language])
+}
+
+model Category {
+  id          String   @id @default(cuid())
+  name        String   @unique
+  slug        String   @unique
+  description String?
+  icon        String?
+  color       String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  articles Article[]
+
+  @@index([slug])
+}
+
+model Bookmark {
+  id        String   @id @default(cuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  articleId String
+  article   Article  @relation(fields: [articleId], references: [id], onDelete: Cascade)
+  createdAt DateTime @default(now())
+
+  @@unique([userId, articleId])
+  @@index([userId])
+  @@index([articleId])
+}
+
+model Comment {
+  id        String   @id @default(cuid())
+  articleId String
+  article   Article  @relation(fields: [articleId], references: [id], onDelete: Cascade)
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  content   String
+  status    CommentStatus @default(PENDING)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([articleId])
+  @@index([userId])
+  @@index([status])
+}
+
+model NewsFeed {
+  id           String   @id @default(cuid())
+  name         String
+  apiType      String   // 'newsapi', 'gnews', 'custom'
+  apiKey       String
+  endpoints    String   // JSON array of endpoints
+  isActive     Boolean  @default(true)
+  lastFetchedAt DateTime?
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  fetchLogs FetchLog[]
+
+  @@index([isActive])
+}
+
+model FetchLog {
+  id            String   @id @default(cuid())
+  feedId        String
+  feed          NewsFeed @relation(fields: [feedId], references: [id], onDelete: Cascade)
+  status        String   // 'success', 'failed'
+  articlesFetched Int    @default(0)
+  errorMessage  String?
+  executedAt    DateTime @default(now())
+
+  @@index([feedId])
+  @@index([executedAt])
+}
+
+// Enums
+enum Role {
+  USER
+  ADMIN
+  SUPER_ADMIN
+}
+
+enum Status {
+  DRAFT
+  PUBLISHED
+  ARCHIVED
+}
+
+enum Language {
+  AR // Arabic
+  EN // English
+  PL // Polish
+  DE // German
+  FR // French
+}
+
+enum CommentStatus {
+  PENDING
+  APPROVED
+  REJECTED
+}

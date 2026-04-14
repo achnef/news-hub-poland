@@ -1,0 +1,79 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-cream text-charcoal;
+    font-family: 'Inter', sans-serif;
+  }
+
+  h1 {
+    @apply font-display text-4xl md:text-5xl font-bold text-primary;
+    letter-spacing: -1px;
+  }
+
+  h2 {
+    @apply font-body text-3xl font-semibold text-primary;
+    letter-spacing: -0.5px;
+  }
+
+  h3 {
+    @apply font-body text-2xl font-semibold text-charcoal;
+  }
+
+  h4 {
+    @apply font-body text-lg font-semibold text-charcoal;
+  }
+
+  p {
+    @apply text-base leading-relaxed;
+  }
+
+  .stat-value {
+    @apply font-mono text-lg font-semibold text-accent;
+  }
+
+  .stat-label {
+    @apply text-sm font-semibold uppercase tracking-wider text-gray-600;
+  }
+}
+
+@layer components {
+  .container {
+    @apply max-w-7xl mx-auto px-4;
+  }
+
+  .btn-primary {
+    @apply px-6 py-2 bg-accent text-white rounded-lg hover:bg-accent/90 transition-colors;
+  }
+
+  .btn-secondary {
+    @apply px-6 py-2 border border-gray-300 text-charcoal rounded-lg hover:bg-gray-50 transition-colors;
+  }
+
+  .card {
+    @apply bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow;
+  }
+
+  .input {
+    @apply w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent;
+  }
+}
+
+/* Dark mode */
+.dark {
+  @apply bg-gray-900 text-gray-100;
+}
+
+.dark .card {
+  @apply bg-gray-800 shadow-lg;
+}
+
+.dark .input {
+  @apply bg-gray-700 border-gray-600 text-gray-100;
+}

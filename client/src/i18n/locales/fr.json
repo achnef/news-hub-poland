@@ -1,0 +1,64 @@
+{
+  "app": {
+    "title": "Poland News Hub",
+    "subtitle": "Agrégateur de Nouvelles Multilingue",
+    "description": "Restez informé des dernières nouvelles de Pologne dans votre langue préférée"
+  },
+  "nav": {
+    "home": "Accueil",
+    "categories": "Catégories",
+    "search": "Recherche",
+    "bookmarks": "Signets",
+    "admin": "Admin",
+    "login": "Connexion",
+    "logout": "Déconnexion",
+    "profile": "Profil"
+  },
+  "categories": {
+    "politics": "Politique",
+    "business": "Affaires",
+    "technology": "Technologie",
+    "sports": "Sports",
+    "entertainment": "Divertissement",
+    "local": "Local",
+    "health": "Santé",
+    "science": "Science"
+  },
+  "buttons": {
+    "readMore": "Lire la suite",
+    "bookmark": "Ajouter un signet",
+    "share": "Partager",
+    "comment": "Commentaire",
+    "search": "Recherche",
+    "filter": "Filtrer",
+    "clear": "Effacer",
+    "save": "Enregistrer",
+    "cancel": "Annuler",
+    "delete": "Supprimer",
+    "edit": "Modifier",
+    "create": "Créer",
+    "publish": "Publier"
+  },
+  "messages": {
+    "loading": "Chargement...",
+    "noResults": "Aucun résultat trouvé",
+    "error": "Une erreur s'est produite",
+    "success": "Succès!",
+    "bookmarkAdded": "Article ajouté aux signets",
+    "bookmarkRemoved": "Signet supprimé",
+    "commentPosted": "Commentaire publié avec succès",
+    "loginRequired": "Veuillez vous connecter pour continuer"
+  },
+  "placeholders": {
+    "search": "Rechercher des nouvelles...",
+    "email": "Entrez votre email",
+    "password": "Entrez votre mot de passe",
+    "comment": "Écrivez un commentaire..."
+  },
+  "time": {
+    "now": "À l'instant",
+    "minutesAgo": "il y a {{count}} minutes",
+    "hoursAgo": "il y a {{count}} heures",
+    "daysAgo": "il y a {{count}} jours"
+  }
+}

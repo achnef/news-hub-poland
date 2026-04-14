@@ -1,0 +1,64 @@
+{
+  "app": {
+    "title": "Poland News Hub",
+    "subtitle": "Mehrsprachiger Nachrichtenaggregator",
+    "description": "Bleiben Sie mit den neuesten Nachrichten aus Polen in Ihrer bevorzugten Sprache auf dem Laufenden"
+  },
+  "nav": {
+    "home": "Startseite",
+    "categories": "Kategorien",
+    "search": "Suche",
+    "bookmarks": "Lesezeichen",
+    "admin": "Admin",
+    "login": "Anmelden",
+    "logout": "Abmelden",
+    "profile": "Profil"
+  },
+  "categories": {
+    "politics": "Politik",
+    "business": "Wirtschaft",
+    "technology": "Technologie",
+    "sports": "Sport",
+    "entertainment": "Unterhaltung",
+    "local": "Lokal",
+    "health": "Gesundheit",
+    "science": "Wissenschaft"
+  },
+  "buttons": {
+    "readMore": "Mehr lesen",
+    "bookmark": "Lesezeichen",
+    "share": "Teilen",
+    "comment": "Kommentar",
+    "search": "Suche",
+    "filter": "Filtern",
+    "clear": "Löschen",
+    "save": "Speichern",
+    "cancel": "Abbrechen",
+    "delete": "Löschen",
+    "edit": "Bearbeiten",
+    "create": "Erstellen",
+    "publish": "Veröffentlichen"
+  },
+  "messages": {
+    "loading": "Wird geladen...",
+    "noResults": "Keine Ergebnisse gefunden",
+    "error": "Ein Fehler ist aufgetreten",
+    "success": "Erfolg!",
+    "bookmarkAdded": "Artikel zu Lesezeichen hinzugefügt",
+    "bookmarkRemoved": "Lesezeichen entfernt",
+    "commentPosted": "Kommentar erfolgreich veröffentlicht",
+    "loginRequired": "Bitte melden Sie sich an, um fortzufahren"
+  },
+  "placeholders": {
+    "search": "Nachrichten durchsuchen...",
+    "email": "Geben Sie Ihre E-Mail ein",
+    "password": "Geben Sie Ihr Passwort ein",
+    "comment": "Schreiben Sie einen Kommentar..."
+  },
+  "time": {
+    "now": "Gerade eben",
+    "minutesAgo": "vor {{count}} Minuten",
+    "hoursAgo": "vor {{count}} Stunden",
+    "daysAgo": "vor {{count}} Tagen"
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "app": {
+    "title": "Poland News Hub",
+    "subtitle": "مجمع الأخبار متعدد اللغات",
+    "description": "ابقَ على اطلاع بأحدث الأخبار من بولندا باللغة المفضلة لديك"
+  },
+  "nav": {
+    "home": "الرئيسية",
+    "categories": "الفئات",
+    "search": "بحث",
+    "bookmarks": "الإشارات المرجعية",
+    "admin": "المسؤول",
+    "login": "تسجيل الدخول",
+    "logout": "تسجيل الخروج",
+    "profile": "الملف الشخصي"
+  },
+  "categories": {
+    "politics": "السياسة",
+    "business": "الأعمال",
+    "technology": "التكنولوجيا",
+    "sports": "الرياضة",
+    "entertainment": "الترفيه",
+    "local": "محلي",
+    "health": "الصحة",
+    "science": "العلوم"
+  },
+  "buttons": {
+    "readMore": "اقرأ المزيد",
+    "bookmark": "إضافة إشارة مرجعية",
+    "share": "مشاركة",
+    "comment": "تعليق",
+    "search": "بحث",
+    "filter": "تصفية",
+    "clear": "مسح",
+    "save": "حفظ",
+    "cancel": "إلغاء",
+    "delete": "حذف",
+    "edit": "تحرير",
+    "create": "إنشاء",
+    "publish": "نشر"
+  },
+  "messages": {
+    "loading": "جاري التحميل...",
+    "noResults": "لم يتم العثور على نتائج",
+    "error": "حدث خطأ",
+    "success": "نجاح!",
+    "bookmarkAdded": "تمت إضافة المقالة إلى الإشارات المرجعية",
+    "bookmarkRemoved": "تمت إزالة الإشارة المرجعية",
+    "commentPosted": "تم نشر التعليق بنجاح",
+    "loginRequired": "يرجى تسجيل الدخول للمتابعة"
+  },
+  "placeholders": {
+    "search": "ابحث عن الأخبار...",
+    "email": "أدخل بريدك الإلكتروني",
+    "password": "أدخل كلمة المرور",
+    "comment": "اكتب تعليقاً..."
+  },
+  "time": {
+    "now": "الآن",
+    "minutesAgo": "منذ {{count}} دقائق",
+    "hoursAgo": "منذ {{count}} ساعات",
+    "daysAgo": "منذ {{count}} أيام"
+  }
+}
